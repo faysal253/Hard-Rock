@@ -49,23 +49,30 @@
                 <h1 class="text-center">Hard Rock Lyric Search</h1>
                 <div class="search-box my-5">
                     <input id="search-field" type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button onclick="searchSongs()" class="btn btn-success search-btn">Search</button>
+                    <button id="search-btn" onclick="searchSongs()" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
+
+            <!-- error msg -->
+            <h3 id="error-msg" class="text-danger d-flex justify-content-center"></h3>
+
+            <!-- loading spinner -->
+            <div id="loading-spinner" class=" d-none">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Single Lyrics -->
-            <div class="single-lyrics text-center">
+            <div id="song-lyrics" class="single-lyrics text-center">
 
             </div>
-            <div class="search-result col-md-8 mx-auto py-4">
-                <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div>
+
+            <!-- song container -->
+            <div id="song-container" class="search-result col-md-8 mx-auto py-4">
+                <div class="search-result col-md-8 mx-auto py-4"></div>
             </div>
         </main>
     </div>
